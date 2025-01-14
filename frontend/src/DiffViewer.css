@@ -1,0 +1,45 @@
+.file-diff {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 20px 0;
+    font-family: monospace;
+  }
+  
+  .file-header {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .chunk-header {
+    background-color: #f0f0f0;
+    padding: 5px;
+    font-weight: bold;
+    border-left: 4px solid #999;
+    margin: 8px 0;
+  }
+  
+  .lines {
+    padding: 0 10px;
+  }
+  
+  .line {
+    white-space: pre-wrap;
+  }
+  
+  .line.addition {
+    color: #4caf50; /* Green for additions */
+    background-color: #eaffea;
+    padding-left: 8px;
+  }
+  
+  .line.deletion {
+    color: #f44336; /* Red for deletions */
+    background-color: #ffecec;
+    padding-left: 8px;
+  }
+  
+  .line.unchanged {
+    color: #333;
+    padding-left: 8px;
+  }
+  
