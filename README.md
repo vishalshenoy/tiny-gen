@@ -38,14 +38,27 @@ curl -X POST "http://127.0.0.1:8000/generate-diff" \
          }'
 ```
 
-## How to Use - Modal Deployment
+## Modal Deployment
 
-- The project is can easily be deployed on Modal via the `modal_main.py` file.
-- Once hosted on Modal, you can hit the endpoint with the deployment link.
-- Example usage is below:
+The project can be deployed on [Modal](https://modal.com) using the `modal_main.py` file. 
 
-```python
-curl -X POST "link to Modal API endpoint" \
+1. Set up your Modal environment variables in the Modal dashboard:
+   - Go to your Modal dashboard
+   - Navigate to "Secrets"
+   - Create a new secret called `tinygen-secret`
+   - Add the following environment variables:
+     - `OPENAI_KEY`: Your OpenAI API key
+     - `SUPABASE_KEY`: Your Supabase key
+     - `SUPABASE_URL`: Your Supabase URL
+
+2. Deploy the application:
+```bash
+modal deploy modal_main.py
+```
+
+3. Make requests using your Modal deployment URL:
+```bash
+curl -X POST "your-modal-api-endpoint" \
      -H "Content-Type: application/json" \
      -d '{
            "repoUrl": "https://github.com/vishalshenoy/dropdoc",
