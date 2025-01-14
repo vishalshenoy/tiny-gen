@@ -13,7 +13,7 @@ It is a FastAPI API that:
 - Runs a reflection step
 - Stores all inputs/outputs in a Supabase DB
 
-## How to Use (Locally)
+## How to Use - Locally
 
 - Create a Python virtual environment with `python3 -m venv venv`
 - Activate the virtual environment with `source venv/bin/activate`
@@ -38,16 +38,24 @@ curl -X POST "http://127.0.0.1:8000/generate-diff" \
          }'
 ```
 
-## How to Use (Deployment)
+## How to Use - Modal Deployment
 
-- The project is also deployed on Modal at https://vishalshenoy--tinygen-app-fastapi-modal-app.modal.run.
+- The project is can easily be deployed on Modal via the `modal_main.py` file.
+- Once hosted on Modal, you can hit the endpoint with the deployment link.
 - Example usage is below:
 
 ```python
-curl -X POST "https://vishalshenoy--tinygen-app-fastapi-modal-app.modal.run/generate-diff" \
+curl -X POST "link to Modal API endpoint" \
      -H "Content-Type: application/json" \
      -d '{
            "repoUrl": "https://github.com/vishalshenoy/dropdoc",
            "prompt": "convert this to TypeScript"
          }'
 ```
+
+## How to Use - Frontend
+
+- The project has a frontend component to easily visualize diffs with Tinygen.
+- Replace the link to the API route with your Modal deplouyment link or local host link.
+- Install node modules in the frontend part and `npm run start`
+- Input your GitHub repo link and description of changes, and click generate!
