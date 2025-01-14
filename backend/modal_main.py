@@ -1,4 +1,4 @@
-# Tinygen code for Modal deployment
+# Tinygen Code for Modal
 
 import modal
 from fastapi import FastAPI, HTTPException

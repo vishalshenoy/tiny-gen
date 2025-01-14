@@ -1,4 +1,4 @@
-# Code for Tinygen
+# Tinygen Code
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
